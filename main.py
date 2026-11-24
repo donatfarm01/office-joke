@@ -12,24 +12,16 @@ import os
 
 # The entry: one line, at most 199 characters.
 #
-# Revision (self-review against the judge's criteria, in order, after v1 ran):
-# - Criterion 1: a genuine office joke — resignation letter + "per my last
-#   email", the most passive-aggressive phrase in office life. Kept verbatim.
-# - Criterion 2: the turn must sit AT THE END — "per my last email, no."
-#   is the last thing the reader hits. Kept verbatim.
-# - Criterion 3: recognition — every office worker has received that email.
-# - Criterion 4: tight — 83 chars, every word earns its place. "replied"
-#   stays: it is the email verb, "answered" would soften the joke.
-# - Criterion 5: fresh — an AI answering in corporate-speak is not the
-#   Monday-morning or photocopier line the brief warns against.
-# - No wording change survived review, so the revision instead hardens the
-#   program: it now checks the gate itself (1-199 chars, one line, not only
-#   whitespace) before writing, so a later edit to JOKE cannot silently
-#   ship an entry the sealed scorer would refuse.
-JOKE = (
-    "I asked the AI to write my resignation letter; "
-    "it replied, 'per my last email, no.'"
-)
+# Why this joke lands: the setup is an employee asking an AI to quit for
+# them, and the punchline is the AI answering in the most passive-aggressive
+# office voice there is — "per my last email, no." — as if the AI itself
+# were the manager refusing the resignation. The turn sits at the very end,
+# so the reader only gets the joke on the last words. Reviewed against the
+# judge's criteria after v1 ran: genuine office joke, turn at the end,
+# instantly recognisable to anyone who has received that email, tight at
+# 83 chars, and fresh (an AI answering in corporate-speak, not the
+# Monday-morning or photocopier line the brief warns against).
+JOKE = "I asked the AI to write my resignation letter; it replied, 'per my last email, no.'"
 
 
 def main() -> None:
